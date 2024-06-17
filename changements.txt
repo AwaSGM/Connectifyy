@@ -1,3 +1,6 @@
+Notes pour coder:
+
+- Utiliser les classes pour les éléments de la page (header, nav, main, footer)
 - Inter : https://fonts.google.com/specimen/Inter?query=inter
 - Chicle : https://fonts.google.com/specimen/Chicle?query=chicle
 - Gravitas One :
@@ -18,6 +21,8 @@ body {
   color: var(--text-color);
 }
 
+ici;:
+
 les chemins
 https://www.w3schools.com/css/css_images.asp
 
@@ -37,9 +42,16 @@ export default Footer;
 
 
 Regler les liens connexes;
+
 regler les styles et polices
 Responsive
+regler les images omg , les musiques
+regler les boutons et les formules
 USEEFFECT DIFFERENTES LANGUES " Msg de  Bienvenu "
+https://fr.legacy.reactjs.org/docs/hooks-effect.html
+
+
+ARBORESCENCE A REMODIFIER 
 
 src/
   Pages/
@@ -54,3 +66,75 @@ src/
       Sidebar.js
   App.js
   App.css
+
+
+
+
+REDUX
+  ***INSTALLATION***
+
+1 npm install redux
+
+
+1 import { configureStore } from '@reduxjs/toolkit';
+2
+3 const store = configureStore();
+4 export default store;
+
+Nous allons créer notre reducer errorsReducer :
+1 const errorsReducer = (state = { errors: [] }, action) => {
+2 switch(action.type) {
+3 case 'ADD_ERROR':
+4 return {errors: [...state.errors, action.payload]};
+5 case 'RESET_ERRORS':
+6 return {errors: []};
+7 default:
+8 return state;
+9 };
+10 };
+
+
+Fondamental Immutabilité du state
+Avec Redux, le state est présumé immutable. Il est capital de prendre cela en compte, sans quoi vous allez
+rencontrer des bugs de synchronisation du state. C'est extrêmement important et, pour être honnête, c'est
+probablement l'élément le plus perturbant pour les développeurs qui apprennent Redux. Il faut absolument
+renvoyer l'objet de state en entier systématiquement à chaque mutation. On ne doit pas simplement modifier une
+valeur à l'intérieur. Pour cette raison, le spread-operator est le meilleur ami du développeur Redux : dans la
+ligne de code ci-avant, on fait en sorte de récupérer tous les éléments du tableau errors pour les réinjecter dans
+le tableau avec la nouvelle valeur. Redux met à disposition une page dédiée
+
+1 sur sa documentation,
+spécifiquement pour fournir des patterns de mutation immutables, tels que celui que nous venons de voir un peu
+plus haut.
+
+
+1 store.subscribe(() => console.log(store.getState()));
+
+
+
+Importons maintenant notre fichier store.js dans index.js pour qu'il soit exécuté :
+1 import './store';
+Syntaxe À retenir
+Redux est une implémentation React du pattern Flux qui est extrêmement populaire. Redux est très inspiré du
+pattern Flux, mais ne reprend cependant pas toutes ses entités. Nous retrouvons le store et les actions, mais
+ces actions sont définies dans un élément spécifique à Redux, les reducers. Ce sont également ces
+reducers qui exposent le state.
+Un reducer est une fonction pure, qui prend en paramètres le state original, ainsi que l'action, et retourne
+un nouvel objet de state contenant la mutation effectuée. Il est fortement conseillé (c'est-à-dire nécessaire)
+avec Redux de faire en sorte que le state soit immutable : chaque action renverra un nouvel objet de state
+contenant les mises à jour.
+Le dispatcher Flux est intégré à la librairie sous la forme de la fonction store.dispatch() qui permet
+dʼémettre une action vers le ou les reducer(s). De la sorte, il est possible de définir plusieurs reducers
+qui seront combinés dans un reducer racine, passé à son tour en paramètre au store. Le state qui découlera
+de plusieurs reducers combinés est un objet dont les propriétés de premier niveau seront les reducers,
+chacune de ces propriétés portera ensuite le state du reducer associé.
+
+
+hooks:
+https://fr.legacy.reactjs.org/docs/hooks-effect.html
+
+filter:
+https://www.w3schools.com/howto/howto_js_filter_elements.asp
+
+
+déboquer les routes encore...

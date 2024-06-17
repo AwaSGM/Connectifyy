@@ -8,7 +8,7 @@ const MusicGallery = () => {
       <div className="track">
         <h3>Queen - Bohemian Rhapsody</h3>
         <audio controls>
-          <source src="path/to/bohemian-rhapsody.mp3" type="audio/mp3" />
+          <source src="path/to/bohemian-rhapsody.mp3" type="audio/mp3" /> 
           Your browser does not support the audio element.
         </audio>
       </div>
@@ -22,5 +22,6 @@ const MusicGallery = () => {
     </div>
   );
 };
+
 
 export default MusicGallery;
