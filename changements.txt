@@ -1,0 +1,56 @@
+- Inter : https://fonts.google.com/specimen/Inter?query=inter
+- Chicle : https://fonts.google.com/specimen/Chicle?query=chicle
+- Gravitas One :
+https://fonts.google.com/specimen/Gravitas+One?query=gravitas+one
+
+
+
+ :root {
+  --primary-color: #004d40;
+  --secondary-color: #ffffff;
+  --accent-color: #ff5722;
+  --background-color: #ffffff;
+  --text-color: #333;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+les chemins
+https://www.w3schools.com/css/css_images.asp
+
+
+// src/components/Footer.js
+import React from 'react';
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <p>&copy; 2023 Connectify. Tous Droits Réservés.</p>
+    </footer>
+  );
+};
+
+export default Footer;
+
+
+Regler les liens connexes;
+regler les styles et polices
+Responsive
+USEEFFECT DIFFERENTES LANGUES " Msg de  Bienvenu "
+
+src/
+  Pages/
+    PageAccueil.js
+    PageConnexion.js
+    PageContact.js
+    PageInscription.js
+    NotFoundPage.js
+    PagePrincipale.js
+  components/
+    sidebar/
+      Sidebar.js
+  App.js
+  App.css

@@ -1,0 +1,102 @@
+.page-inscription {
+    text-align: center;
+    background-color: #ccc;
+  }
+  
+  .page-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #006400;
+  }
+  
+  .page-header h1 {
+    margin: 0;
+  }
+  
+  .page-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .page-header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .page-header nav ul li a.active {
+    color: #ffd700;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px); /* Adjust based on your header and footer height */
+  }
+  
+  .left-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .right-section {
+    background-color: #006400;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+  }
+  
+  .inscription-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .inscription-box h2 {
+    margin-bottom: 20px;
+    color: #ffd700;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #ffd700;
+    color: #006400;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #e6c200;
+  }
+  
+  .page-footer {
+    padding: 20px;
+    background-color: #006400;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  

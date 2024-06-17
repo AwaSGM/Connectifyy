@@ -1,0 +1,40 @@
+/* src/components/Wall.css */
+.wall {
+    padding: 1rem;
+    background-color: var(--background-color);
+    border: 1px solid #ddd;
+    margin-bottom: 2rem;
+  }
+  
+  .post {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .post-header {
+    font-weight: bold;
+  }
+  
+  .message-input {
+    display: flex;
+    margin-top: 1rem;
+  }
+  
+  .message-input input {
+    flex: 1;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .message-input button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .message-input button:hover {
+    background-color: #00332c;
+  }
+  

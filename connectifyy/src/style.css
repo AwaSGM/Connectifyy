@@ -1,0 +1,132 @@
+.wall, .gallery, .video-gallery, .music-gallery {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .wall, .gallery, .video-gallery, .music-gallery {
+    padding: 1rem;
+    background-color: var(--background-color);
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  /* Gallery styles */
+  .gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .gallery-item {
+    width: calc(33.333% - 1rem);
+    cursor: pointer;
+  }
+  
+  .gallery-item:hover {
+    opacity: 0.8;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay-content {
+    position: relative;
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  
+  .selected-image {
+    max-width: 100%;
+  }
+  
+  .detailed-view {
+    display: flex;
+    align-items: center;
+  }
+  
+  .detailed-view img {
+    max-width: 200px;
+    margin-right: 1rem;
+  }
+  
+  .details {
+    flex: 1;
+  }
+  
+  .details p {
+    margin: 0 0 1rem 0;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .actions .likes {
+    margin-right: 1rem;
+  }
+  
+  .actions .likes i {
+    color: red;
+    margin-right: 0.5rem;
+  }
+  
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #00332c;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .navbar-content, .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .main-content {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+    }
+  
+    .content {
+      width: 100%;
+    }
+  
+    .gallery-item {
+      width: calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery-item {
+      width: 100%;
+    }
+  }
